@@ -8,15 +8,14 @@
     - เมื่อ Algorithm นี้ทำงาน จะต้องเห็นผลลัพธ์ด้านล่าง
 */
 
-function addBonusForSelectedDepartment (employeeInfo, bonus, department) {
-  let totalSalary = 0;
-  for (let i = 0; i < employeeInfo.length; i++){
-      if (employeeInfo[i].department === department){
-        totalSalary = totalSalary + employeeInfo[i].salary + bonus;
-      }
-  }
-  return totalSalary;
-}
+//เลือกเฉพาะคนที่อยุ่ในแผนกที่จะเพิ่มโบนัส -> filter
+// คนที่ตรงตามเงื่อนไขจะถูกเพิ่มโบนัสตามที่ระบุไว้ -> map
+//เจ้าของบริษัทจะต้องใช้เงินทั้งหมดเท่าไหร่ -> reduce
+
+function addBonusForSelectedDepartment (employeeInfo,bonus,department){
+  const resultFromFilteres = employeeInfo.filter((employee) => employee.department === department);
+  console.log(resultFromFilteres);
+};
 
 const employeeInfo = [
   {
