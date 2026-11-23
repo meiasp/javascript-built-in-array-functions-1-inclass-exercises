@@ -7,6 +7,9 @@
 */
 
 // Start coding here
+function exponentialNumber(numbers){
+    return numbers.map((num) => num**2); //num คือ ตัวเลขใน array
+}
 
 const numbers1 = [3, 5, 10, 12];
 console.log(exponentialNumber(numbers1)); // [ 9, 25, 100, 144 ]
